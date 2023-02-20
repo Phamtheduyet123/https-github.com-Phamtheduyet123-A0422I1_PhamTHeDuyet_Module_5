@@ -1,0 +1,2 @@
+https://levunguyen.com/hoc-lap-trinh-typescript/
+https://levunguyen.com/laptrinhweb/2021/07/18/su-dung-promise-trong-angular/
