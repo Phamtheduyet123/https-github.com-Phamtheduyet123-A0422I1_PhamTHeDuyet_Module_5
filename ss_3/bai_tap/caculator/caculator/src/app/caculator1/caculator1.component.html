@@ -1,0 +1,10 @@
+
+<input  #number1 type="number"  placeholder="number">
+<button (click)="plus(number1.value,number2.value,'+')">+</button>
+<button (click)="plus(number1.value,number2.value,'-')">-</button>
+<button (click)="plus(number1.value,number2.value,'*')">*</button>
+<button (click)="plus(number1.value,number2.value,'/')">/</button>
+<input #number2 type="number"  placeholder="number" >
+
+<p>{{result}}</p>
+

@@ -1,0 +1,13 @@
+<p>color works!</p>
+<div style="border: 0.1875em solid #0F1C3F; border-radius: 50%; height: 30em; width: 30em; display: inline-block"
+     [style.background-color]="color"></div>
+<div style="display: inline-block">
+<select (change)="changColor($event.target)">
+  <option  value="">Change color</option>
+  <option style="background-color: blue" value="blue"></option>
+  <option style="background-color: yellow"  value="yellow"></option>
+  <option style="background-color: green" value="green"></option>
+  <option style="background-color: gray"  value="gray"></option>
+  <option style="background-color: black"  value="black"></option>
+</select>
+</div>
