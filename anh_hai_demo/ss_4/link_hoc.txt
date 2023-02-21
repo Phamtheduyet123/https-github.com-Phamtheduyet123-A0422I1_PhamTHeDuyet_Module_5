@@ -1,0 +1,9 @@
+https://levunguyen.com/laptrinhweb/2021/06/13/su-dung-directive-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/14/su-dung-directive-ngFor-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/15/su-dung-directive-ngSwitch-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/16/su-dung-directive-ngif-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/17/su-dung-directive-ngclass-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/18/su-dung-directive-ngstyle-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/19/su-dung-customs-directive-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/20/su-dung-pipes-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/21/huong-dan-tu-tao-pipes-trong-angular/

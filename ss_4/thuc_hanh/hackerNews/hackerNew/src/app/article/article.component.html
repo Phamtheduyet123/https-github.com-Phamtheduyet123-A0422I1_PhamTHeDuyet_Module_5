@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<p>article works!</p>
+
+<h2>Today's article</h2>
+<hr>
+<div>
+  <a href="{{acticle.url}}" target="_blank">{{acticle.tilte}}</a>
+</div>
+<hr>
+<div>
+  <h2>Article Information</h2>
+  <table>
+    <tr>
+      <td>Title:</td>
+      <td>
+        <textarea [(ngModel)]="acticle.tilte" cols="70"></textarea>
+      </td>
+      <td>Url</td>
+      <td>
+        <textarea [(ngModel)]="acticle.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button style="float: right"(click)="addNewArticle()">Add</button></td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div *ngFor="let a of acticles">
+  <a href="{{a.url}}" target="_blank">{{a.tilte}}</a>:<app-like></app-like>
+</div>
+@CodeGym, 2023
+<app-footer></app-footer>

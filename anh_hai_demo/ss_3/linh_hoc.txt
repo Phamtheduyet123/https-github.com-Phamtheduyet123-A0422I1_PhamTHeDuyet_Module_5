@@ -1,0 +1,4 @@
+https://levunguyen.com/laptrinhweb/2021/06/03/co-che-hoat-dong-trong-Angular/
+https://levunguyen.com/laptrinhweb/2021/06/04/su-dung-component-trong-Angular/
+https://levunguyen.com/laptrinhweb/2021/06/05/su-dung-data-binding-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/10/su-dung-bootstrap-trong-angular/
