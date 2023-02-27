@@ -1,0 +1,3 @@
+https://levunguyen.com/laptrinhweb/2021/06/27/truyen-du-lieu-tu-component-cha-cho-component-con-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/28/truyen-du-lieu-tu-component-con-len-component-cha-trong-angular/
+https://levunguyen.com/laptrinhweb/2021/06/29/vong-doi-cua-component-trong-angular/

@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <th>Ten khach hang</th>
+    <th>Ngay sinh</th>
+    <th>Gioi Tinh</th>
+    <th>Email</th>
+    <th>So dien thoai</th>
+    <th>CMND</th>
+    <th>Loai khach</th>
+    <th>Dia chi</th>
+  </tr>
+  <tr *ngFor="let i of customer">
+    <td>{{customer.customer_name}}</td>
+    <td>{{customer.date}}</td>
+    <td>{{customer.sex}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.cmnd}}</td>
+    <td>{{customer.loai_khach}}</td>
+    <td>{{customer.address}}</td>
+    <td><a href="#">Edit</a></td>
+    <td><a href="#" (click)="deleteByName(customer)">Delete</a></td>
+  </tr>
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span>Bạn có muốn xoá </span><span>{{aloneCustomer.customer_name}}</span><span> Không?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">OK</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

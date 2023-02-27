@@ -1,0 +1,8 @@
+<h3>Rating Bar</h3>
+<p>{{number}}</p>
+<table>
+  <tr>
+    <td *ngFor="let item of arr" [ngStyle]="{backgroundColor:item.back_color,color:color}" (click)="display(item.number)" >{{item.number}}</td>
+  </tr>
+</table>
+<p ></p>
