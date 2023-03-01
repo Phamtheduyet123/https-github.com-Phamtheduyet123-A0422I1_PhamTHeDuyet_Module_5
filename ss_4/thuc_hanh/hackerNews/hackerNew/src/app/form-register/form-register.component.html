@@ -1,0 +1,42 @@
+<h3>Register</h3>
+<form [formGroup]="register" (ngSubmit)="Register()">
+  <label>Email:</label>
+  <input type="email" formControlName="email" name="email">
+  <p style="color: red" *ngIf="register.controls.email.hasError('required')&& register.controls.email.touched">Email khong duoc de trong</p>
+  <p style="color: red" *ngIf="register.controls.email.hasError('pattern')&& register.controls.email.touched">Email khong dung dinh dang</p>
+  <br>
+  <label>Password:</label>
+  <input type="text" formControlName="password" name="password">
+  <p style="color: red" *ngIf="register.controls.password.hasError('required')&& register.controls.password.touched">Password khong duoc de trong</p>
+  <p style="color: red" *ngIf="register.controls.password.hasError('minlength')&& register.controls.password.touched">Password khong duoc duoi 6 ky tu</p>
+  <br>
+  <label>Confirm Password:</label>
+  <input type="text" formControlName="confirmPassword" name="confirmPassword">
+  <p style="color: red" *ngIf="register.controls.confirmPassword.hasError('required')&& register.controls.confirmPassword.touched">ConfirmPassword khong duoc de trong</p>
+  <p style="color: red" *ngIf="(register.controls.confirmPassword.touched) && register.hasError('invalidconfirmPassword')">ConfirmPassword chua dung</p>
+  <br>
+  <label>Country:</label>
+  <select name="country" formControlName="country">
+    <option value="Viet nam">Viet nam</option>
+    <option selected="selected" value="Trung quoc">Trung quoc</option>
+    <option value="Phap">Phap</option>
+    <option value="My">My</option>
+  </select>
+  <br>
+  <label>Age:</label>
+  <input type="number" formControlName="age" name="age">
+  <p style="color: red" *ngIf="register.controls.age.hasError('required')&& register.controls.age.touched">Age khong duoc de trong</p>
+  <p style="color: red" *ngIf="register.controls.age.hasError('min')&& register.controls.age.touched">Age phai > 18</p>
+  <br>
+  <label>Gender:</label>
+  <input name="gender" type="radio" value="male" checked="checked" formControlName="gender">Male
+  <input name="gender" type="radio" value="Famale" formControlName="gender">Famale
+  <br>
+  <label>Phone:</label>
+  <input type="text" formControlName="phone" name="phone">
+  <p style="color: red" *ngIf="register.controls.phone.hasError('required')&& register.controls.phone.touched">Phone khong duoc de trong</p>
+  <p style="color: red" *ngIf="register.controls.phone.hasError('pattern')">Phone chua dung dinh dang</p>
+
+  <br>
+  <input type="submit" value="Register">
+</form>
