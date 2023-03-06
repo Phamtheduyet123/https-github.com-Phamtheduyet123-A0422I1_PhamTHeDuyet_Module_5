@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewCustomerComponent } from './customer/new-customer/new-customer.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
 import { FacilityListComponent } from './facility/facility-list/facility-list.component';
 import { FacilityEditComponent } from './facility/facility-edit/facility-edit.component';
 import { FacilityCreateComponent } from './facility/facility-create/facility-create.component';
 import { ContractCreateComponent } from './contract/contract-create/contract-create.component';
-import { ContractCustomerComponent } from './contract/contract-customer/contract-customer.component';
+import { ContractCustomerComponent } from './contract/contract-list/contract-customer.component';
 import { BodyComponent } from './body/body.component';
 
 @NgModule({
@@ -34,7 +34,8 @@ import { BodyComponent } from './body/body.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

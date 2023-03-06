@@ -10,16 +10,16 @@
     <th>Dia chi</th>
   </tr>
   <tr *ngFor="let i of customer">
-    <td>{{customer.customer_name}}</td>
-    <td>{{customer.date}}</td>
-    <td>{{customer.sex}}</td>
-    <td>{{customer.email}}</td>
-    <td>{{customer.phone}}</td>
-    <td>{{customer.cmnd}}</td>
-    <td>{{customer.loai_khach}}</td>
-    <td>{{customer.address}}</td>
+    <td>{{i.customer_name}}</td>
+    <td>{{i.date}}</td>
+    <td>{{i.sex}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.phone}}</td>
+    <td>{{i.cmnd}}</td>
+    <td>{{i.loai_khach}}</td>
+    <td>{{i.address}}</td>
     <td><a href="#">Edit</a></td>
-    <td><a href="#" (click)="deleteByName(customer)">Delete</a></td>
+    <td><a href="#" (click)="deleteByName(i)">Delete</a></td>
   </tr>
 </table>
 <!-- Modal -->

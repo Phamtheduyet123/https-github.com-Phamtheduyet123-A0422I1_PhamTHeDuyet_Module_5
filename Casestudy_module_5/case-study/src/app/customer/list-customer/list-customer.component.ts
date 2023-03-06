@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ICustomer} from "../../model/customer/icustomer";
+import {CustomerServiceService} from "../../Service/service-customer/customer-service.service";
 
 @Component({
   selector: 'app-list-customer',
@@ -7,24 +8,14 @@ import {ICustomer} from "../../model/customer/icustomer";
   styleUrls: ['./list-customer.component.css']
 })
 export class ListCustomerComponent implements OnInit {
-  aloneCustomer:ICustomer={};
-  customer: ICustomer = {
-    customer_name: 'Pham the duyet',
-    date: new Date(2002,1,23),
-    sex: true,
-    cmnd: 123456789,
-    phone: 12326933,
-    email: 'duyetpham322@gmail.com',
-    loai_khach: 'member',
-    address: 'da nang'
-  }
-
-  constructor() {
+  customer1:ICustomer[]=[];
+  constructor(private customer:CustomerServiceService) {
   }
 
   ngOnInit(): void {
+    this.customer1=this.customer.getAll();
   }
   deleteByName(customer:ICustomer){
-    this.aloneCustomer=customer;
+    this.customer.delete(customer);
   }
 }

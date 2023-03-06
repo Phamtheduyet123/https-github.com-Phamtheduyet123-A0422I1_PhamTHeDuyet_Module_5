@@ -1,13 +1,14 @@
 
-<form >
-  Ten khach hang: <input type="text"><br>
-  Ngay sinh : <input type="date" ><br>
-  Gioi tinh : <input type="text"><br>
-  CMND : <input type="text"><br>
-  Phone : <input type="text"><br>
-  Email : <input type="text"><br>
-  Loai Khach : <input type="text"><br>
-  Dia chi : <input type="text"><br>
+<form [formGroup]="createStudent" (ngSubmit)="Create()" >
+  Ten khach hang: <input type="text" formControlName="customer_name" name="customer_name"><br>
+  Ngay sinh : <input type="date"  formControlName="date" name="date"><br>
+  Gioi tinh : <input type="radio" formControlName="sex" name="sex" value="true">
+  <input type="radio" formControlName="sex" name="sex" value="false"><br>
+  CMND : <input type="text" formControlName="cmnd" name="cmnd"><br>
+  Phone : <input type="number" formControlName="phone" name="phone"><br>
+  Email : <input type="email" formControlName="email" name="email"><br>
+  Loai Khach : <input type="text" formControlName="loai_khach" name="loai_khach"><br>
+  Dia chi : <input type="text" formControlName="address" name="address"><br>
   <br>
   <button type="submit">Create</button>
 </form>

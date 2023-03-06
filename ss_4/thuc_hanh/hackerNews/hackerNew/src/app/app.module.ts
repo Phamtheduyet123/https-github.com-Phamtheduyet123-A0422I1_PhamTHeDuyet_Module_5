@@ -9,19 +9,23 @@ import {LikeComponent} from "./like/like.component";
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { TodoComponent } from './todo/todo.component';
-import { FormRegisterComponent } from './form-register/form-register.component';
+import { PlaylistAppComponent } from './playlist-app_ss7_thuc_hanh2/playlist-app.component';
+import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import {FormRegisterComponent} from "./ss-6-bai-tap-form-register/form-register.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ArticleComponent,
-    LikeComponent,
-    LikeComponent,
-    NavbarComponent,
-    FooterComponent,
-    TodoComponent,
-    FormRegisterComponent
-  ],
+    declarations: [
+        AppComponent,
+        ArticleComponent,
+        LikeComponent,
+        LikeComponent,
+        NavbarComponent,
+        FooterComponent,
+        TodoComponent,
+        PlaylistAppComponent,
+        YoutubePlayerComponent,
+        FormRegisterComponent
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,

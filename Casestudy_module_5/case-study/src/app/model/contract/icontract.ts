@@ -1,5 +1,5 @@
 export interface IContract {
-  soHopDong:number;
+  soHopDong?:number;
   ngayBatDau:Date;
   ngayKetThuc:Date;
   soTienCoc:number;
