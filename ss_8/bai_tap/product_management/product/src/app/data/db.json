@@ -1,0 +1,48 @@
+{
+  "products123": [
+    {
+      "id": 1,
+      "name": "Iphone12",
+      "price": 3,
+      "description": "Blue",
+      "category": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Iphone10",
+      "price": 20000000,
+      "description": "Black",
+      "category": {
+        "id": 1,
+        "name": "Iphone"
+      }
+    },
+    {
+      "id": 3,
+      "name": "SamsumUltras",
+      "price": 22000000,
+      "description": "Yellow22",
+      "category": {
+        "id": 2,
+        "name": "Samsum"
+      }
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Iphone"
+    },
+    {
+      "id": 2,
+      "name": "Samsum"
+    },
+    {
+      "id": 3,
+      "name": "Oppo"
+    }
+  ]
+}

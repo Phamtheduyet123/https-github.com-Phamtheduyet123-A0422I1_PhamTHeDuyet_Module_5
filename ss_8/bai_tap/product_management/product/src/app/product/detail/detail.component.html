@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+    <td>Category</td>
+    <td>Action</td>
+  </tr>
+  <tr>
+    <td>{{products.id}}</td>
+    <td>{{products.name}}</td>
+    <td>{{products.price}}</td>
+    <td>{{products.description}}</td>
+    <td>{{products.category.name}}</td>
+<!--    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="deleteIt(products)">-->
+<!--      delete-->
+<!--    </button>-->
+    <button (click)="delete(products.id)">
+      delete
+    </button>
+  </tr>
+</table>
+<!-- Modal-->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        delete this {{product.name}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="delete(product.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
