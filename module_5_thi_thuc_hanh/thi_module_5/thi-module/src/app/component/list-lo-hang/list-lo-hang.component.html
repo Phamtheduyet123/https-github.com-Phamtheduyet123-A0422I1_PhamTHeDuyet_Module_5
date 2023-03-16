@@ -1,0 +1,61 @@
+<form class="d-flex" [formGroup]="formSearch" (ngSubmit)="findByNameAndSanPham()">
+  <input  class="form-control me-2" type="search" placeholder="Name Search" aria-label="Search" name="name" formControlName="name">
+<!--  <select name="category" formControlName="category_id">-->
+<!--    <option value="" selected>Category Search</option>-->
+<!--    <option *ngFor="let i of sanPham" value="{{i.id}}">-->
+<!--      {{i.name}}-->
+<!--    </option>-->
+<!--  </select>-->
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<a routerLink="/create">Nhap Hang</a>
+<table class="table table-hover">
+  <tr>
+    <td>Ma Lo Hang</td>
+    <td>Ten San Pham</td>
+    <td>Gia Tien</td>
+    <td>Don vi</td>
+    <td>So Luong</td>
+    <td>Ngay Nhap Hang</td>
+    <td>Ngay Xuat Hang</td>
+    <td>Ngay Het Han</td>
+    <td>Action</td>
+  </tr>
+  <tr  *ngFor="let lohang of loHang | paginate: config; index as i">
+    <td>{{lohang.maLoHhang}}</td>
+    <td>{{lohang.sanPham.name}}</td>
+    <td>{{lohang.sanPham.giaTien}}</td>
+    <td>{{lohang.sanPham.donVi}}</td>
+    <td>{{lohang.soLuong}}</td>
+    <td>{{lohang.ngayNhapHang}}</td>
+    <td>{{lohang.ngayXuatHang}}</td>
+    <td>{{lohang.ngayHetHan}}</td>
+    <td>
+    <span><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="deleteIt(lohang)">
+      Delete
+    </button></span>
+    </td>
+
+  </tr>
+</table>
+<pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trang trước" nextLabel="Trang sau"></pagination-controls>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Ban muon xoa {{lohang.maLoHhang}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="delete(lohang.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

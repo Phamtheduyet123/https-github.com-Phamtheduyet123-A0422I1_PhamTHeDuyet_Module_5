@@ -1,0 +1,48 @@
+<h1>Tạo sản phẩm mới</h1>
+<form [formGroup]="loHangForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Ma Lo Hang:</td>
+      <td><input type="text" formControlName="maLoHhang"></td>
+      <p style="color: red" *ngIf="loHangForm.controls.maLoHhang.hasError('required')&& loHangForm.controls.maLoHhang.touched">Ma san pham khong duoc de trong</p>
+      <p style="color: red" *ngIf="loHangForm.controls.maLoHhang.hasError('pattern')&& loHangForm.controls.maLoHhang.touched">Ma san pham phai dung dinh dang LH-XXXX</p>
+    </tr>
+    <tr>
+      <td>San Pham:</td>
+      <td>
+        <select  formControlName="sanPham" name="sanPham">
+          <option *ngFor="let i of sanPham" [ngValue]="i">{{i.name}}</option>
+        </select>
+      </td>
+      <p style="color: red" *ngIf="loHangForm.controls.sanPham.hasError('required')&& loHangForm.controls.sanPham.touched">an pham khong duoc de trong</p>
+    </tr>
+    <tr>
+      <td>So Luong:</td>
+      <td><input type="number" formControlName="soLuong"></td>
+      <p style="color: red" *ngIf="loHangForm.controls.soLuong.hasError('required')&& loHangForm.controls.soLuong.touched">So luong khong duoc de trong</p>
+      <p style="color: red" *ngIf="loHangForm.controls.soLuong.hasError('min')&& loHangForm.controls.soLuong.touched">So luong phai la so nguyen duong</p>
+    </tr>
+    <tr>
+      <td>Ngay Nhap Hang:  </td>
+      <td><input type="date" formControlName="ngayNhapHang"></td>
+      <p style="color: red" *ngIf="loHangForm.controls.ngayNhapHang.hasError('required')&& loHangForm.controls.ngayNhapHang.touched">Ngay Nhap Hang khong duoc de trong</p>
+    </tr>
+    <tr>
+      <td>Ngay Xuat Hang:  </td>
+      <td><input type="date" formControlName="ngayXuatHang"></td>
+      <p style="color: red" *ngIf="loHangForm.controls.ngayXuatHang.hasError('required')&& loHangForm.controls.ngayXuatHang.touched">Ngay Xuat Hang khong duoc de trong</p>
+    </tr>
+    <tr>
+    <tr>
+      <td>Ngay Het Han:  </td>
+      <td><input type="date" formControlName="ngayHetHan"></td>
+    <p style="color: red" *ngIf="loHangForm.controls.ngayHetHan.hasError('required')&& loHangForm.controls.ngayHetHan.touched">NgayHet Han khong duoc de trong</p>
+    </tr>
+    <br>
+
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>

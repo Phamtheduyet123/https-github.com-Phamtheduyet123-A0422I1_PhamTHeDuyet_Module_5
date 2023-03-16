@@ -1,0 +1,43 @@
+{
+  "loHang": [
+    {
+      "maLoHhang": "LH-0002",
+      "sanPham": {
+        "id": 1,
+        "name": "Bia",
+        "xuatSu": "Sai gon",
+        "giaTien": 10000,
+        "donVi": "VND"
+      },
+      "soLuong": 3,
+      "ngayNhapHang": "2023-03-09",
+      "ngayXuatHang": "2023-03-09",
+      "ngayHetHan": "2023-03-31",
+      "id": 9
+    },
+    {
+      "maLoHhang": "LH-0003",
+      "sanPham": {
+        "id": 1,
+        "name": "Bia",
+        "xuatSu": "Sai gon",
+        "giaTien": 10000,
+        "donVi": "VND"
+      },
+      "soLuong": 4,
+      "ngayNhapHang": "2023-03-16",
+      "ngayXuatHang": "2023-03-16",
+      "ngayHetHan": "2023-03-16",
+      "id": 10
+    }
+  ],
+  "sanPham": [
+    {
+      "id": 1,
+      "name": "Bia",
+      "xuatSu": "Sai gon",
+      "giaTien": 10000,
+      "donVi": "VND"
+    }
+  ]
+}
